@@ -30,13 +30,13 @@ Upstage Information Extract 기반 AI Agent 프로토 타입
 
 ```
 [1. 이미지 기반 입력]
-- 사용자는 **음식 사진이 아닌 ‘영양성분표 이미지’**를 업로드
+- 사용자는 음식 사진이 아닌 ‘영양성분표 이미지’를 업로드
 - 실제 제품 단위의 정보를 직접 활용
       ↓
 [2. OCR + 구조화 파이프라인]
 - 1단계: OCR을 통한 텍스트 인식
 - 2단계: 인식 오류를 고려한 규칙 기반 보정
-- 3단계: 영양성분을 **의미 단위(JSON 구조)**로 정리
+- 3단계: 영양성분을 의미 단위(JSON 구조)로 정리
       ↓
 [3. 누적 관리 및 시각화]
 - 세션 단위로 일일 섭취량 누적
@@ -110,11 +110,7 @@ OCR 기반 접근의 가장 큰 한계는
 [시각화 & 다운로드]
 
 - Frontend: Streamlit
-- OCR / Parsing:
-  - 초기 데모에서는 EasyOCR을 사용하여 텍스트를 인식하고, 규칙 기반 후처리로 영양성분을 파싱하였습니다.
-
-  - 본 프로젝트에서는 이러한 구조의 한계를 인식하고, 문서 이해 단계에서 Upstage Information Extract API로 대체 가능한 Agent 구조를 설계하였습니다.
-
+- OCR / Parsing:Upstage Information Extract API
 - 상태 관리: Streamlit Session State
 
 ```
